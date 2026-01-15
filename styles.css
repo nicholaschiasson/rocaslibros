@@ -106,13 +106,13 @@ footer {
     gap: 0.5rem;
 }
 
-#gr_custom_widget_current,
-#gr_custom_widget_roster {
+[id^="gr_custom_widget_current_"],
+[id^="gr_custom_widget_roster_"] {
     grid-column-end: span 2;
 }
 
-#gr_custom_widget_current:not(:has([class^="gr_custom_each_container_"])),
-#gr_custom_widget_roster:not(:has([class^="gr_custom_each_container_"])) {
+[id^="gr_custom_widget_current_"]:not(:has([class^="gr_custom_each_container_"])),
+[id^="gr_custom_widget_roster_"]:not(:has([class^="gr_custom_each_container_"])) {
     display: none;
 }
 
