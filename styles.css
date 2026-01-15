@@ -1,0 +1,175 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.shelves {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+}
+
+#gr_custom_widget_current,
+#gr_custom_widget_roster {
+    grid-column-end: span 2;
+}
+
+#gr_custom_widget_current:not(:has([class^="gr_custom_each_container_"])),
+#gr_custom_widget_roster:not(:has([class^="gr_custom_each_container_"])) {
+    display: none;
+}
+
+[class^="gr_custom_container_"] {
+    /* customize your Goodreads widget container here*/
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+[class^="gr_custom_container_"] center,
+[class^="gr_custom_container_"] br {
+    display: none;
+}
+
+[class^="gr_custom_header_"] {
+    /* customize your Goodreads header here*/
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 120%;
+}
+
+[class^="gr_custom_each_container_"] {
+    /* customize each individual book container here */
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+}
+
+[class^="gr_custom_book_container_"] {
+    /* customize your book covers here */
+    overflow: hidden;
+    /* height: 60px; */
+    float: left;
+    margin-right: 4px;
+    /* width: 39px; */
+}
+
+[class^="gr_custom_author_"] {
+    /* customize your author names here */
+    font-size: 10px;
+}
+
+[class^="gr_custom_tags_"] {
+    /* customize your tags here */
+    font-size: 10px;
+    color: gray;
+}
+
+[class^="gr_custom_rating_"] {
+    /* customize your rating stars here */
+    float: right;
+}
