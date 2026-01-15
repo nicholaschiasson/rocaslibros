@@ -1,6 +1,6 @@
 # Rocas Libros
 
-A static HTML website for Rocas Libros.
+A static HTML website for Rocas Libros book club.
 
 ## Getting Started
 
