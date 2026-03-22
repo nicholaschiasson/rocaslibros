@@ -3,12 +3,13 @@
   "name": "Rocas Libros",
   "icons": [
     {
+      "purpose": "maskable",
       "src": "/rocaslibros/favicon.png",
       "type": "image/png"
     }
   ],
   "start_url": "/rocaslibros/index.html",
   "display": "standalone",
-  "theme_color": "black",
+  "theme_color": "white",
   "background_color": "white"
 }
